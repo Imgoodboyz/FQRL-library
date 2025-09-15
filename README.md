@@ -3,3 +3,4 @@ so this library was make to run on the oldest compiler or the oldest c++ version
 if you guy have any idea send me a email on this gmail
 giab06052011@gmail.com 
 hope you guys have fun on coding ;)
+it's in developing guy,just wait
