@@ -1,0 +1,46 @@
+FCLC-Fast CaLCulating
+sum()
+how to write
+#sum ({list of number seperate with coma or space})
+use sum() to calculating many number in just 1 line,also you
+can make an input to get a line of string and after that it 
+will plus all the number together
+
+avg()
+how to write
+#avg ({also like the sum})
+use avg to calculating average of many number in 1 line,also
+you can do thing like sum but it calc the average
+
+FACS-Fast ACcess System
+abs()
+how to write
+abs(file name)
+it will find the absolute path of the file that you write on
+the bracket...that's all what it have...maybe
+
+log()
+how to write
+log(file name,data want to write)
+it will write on a .log file and that it what do you want on 
+that,i'll rename it as write because it look the same with 
+the write function
+
+read()
+how to write
+read(file name)
+it will find the path of the file and read anything it have
+only read no encode file but in the actual release it will
+
+write() [remove in 0.0.14]
+how to write
+like log() actualy :)
+
+prt()
+just fast printing
+prt(data,true/false)
+the true or false is for have endl or not
+
+just easy like that
+and also you will have some macro is
+
