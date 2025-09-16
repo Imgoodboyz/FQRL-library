@@ -1,0 +1,21 @@
+FQRL License v1.0
+
+Copyright (c) 2025 Imgoodboyz
+
+You are permitted to:
+
+- Read and learn from the FQRL source code
+- Modify the source code for personal use or contribution purposes
+
+You are NOT permitted to:
+
+- Redistribute the source code under a different name
+- Push modified versions of the code to any public platform (e.g., GitHub, GitLab) without explicit permission from the author
+- Use FQRL in commercial products or paid services
+- Remove or alter the author's name in any part of the source code
+- Change or modifi the license.txt 
+
+Edit rights and contribution privileges are granted only to individuals verified by the author.  
+All pull requests must be reviewed and approved by Imgoodboyz before acceptance.
+
+FQRL is a school-born library with a philosophy. Usage must come with respect for its structure and its creator.

@@ -1,7 +1,7 @@
 #ifndef header
 #define header
 #define version = "0.0.13"
-#define minimum = "c++ 17"
+#define minimum = "c++ 20"
 #define stage = "preview"
 #define last_update = "14/9/2025"
 #define authorizer = "imgoodboy"
@@ -11,6 +11,8 @@
 #include <fstream>
 #include <stdexcept>
 #include <iostream>
+#include <vector>
+#include <sstream>
 namespace fclc
 {
     template<typename T>
@@ -73,7 +75,8 @@ namespace facs
 	lk << data << std::endl;
 	return "done";
     }
-    inline void prt(std::string data,bool line)
+    template<typename T>
+    inline void prt(T data,bool line)
     {
         if (line == true)
         {
