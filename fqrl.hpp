@@ -87,5 +87,10 @@ namespace facs
              std::cout<<data;
         }
     }
+    template<typename T>
+    inline void ipt(T& name)
+    {
+        std::cin>>name;
+    }
 }
 #endif
