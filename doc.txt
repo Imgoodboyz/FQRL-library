@@ -21,7 +21,7 @@ the bracket...that's all what it have...maybe
 
 log()
 how to write
-log(file name,data want to write)
+#log(file name,data want to write)
 it will write on a .log file and that it what do you want on 
 that,i'll rename it as write because it look the same with 
 the write function
@@ -29,16 +29,21 @@ the write function
 read()
 how to write
 read(file name)
-it will find the path of the file and read anything it have
+#it will find the path of the file and read anything it have
 only read no encode file but in the actual release it will
 
 write() [remove in 0.0.14]
 how to write
 like log() actualy :)
 
+ipt()
+how to write
+#ipt(name of the object(e.x (int)a,b,c,d))
+use like std::cin but faster
+
 prt()
 just fast printing
-prt(data,true/false)
+#prt(data,true/false)
 the true or false is for have endl or not
 
 just easy like that

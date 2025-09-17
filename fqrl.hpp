@@ -1,8 +1,7 @@
 #ifndef header
 #define header
-#define version = "0.0.13"
+#define version = "0.0.14-preview"
 #define minimum = "c++ 20"
-#define stage = "preview"
 #define last_update = "14/9/2025"
 #define authorizer = "imgoodboy"
 #include <initializer_list>
