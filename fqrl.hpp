@@ -1,6 +1,6 @@
 #ifndef header
 #define header
-#define version = "0.0.14-preview"
+#define version = "0.0.14-future-preview"
 #define minimum = "c++ 20"
 #define last_update = "14/9/2025"
 #define authorizer = "imgoodboy"
@@ -44,18 +44,16 @@ namespace facs
        return std::filesystem::absolute(name).string();
     }
     template<typename T>
-    inline T log(const T data)
+    inline T write(const std::string file,const T data)
     {
-       std::filesystem::path caller(__FILE__);
-       std::filesystem::path logger = caller.parent_path()/"log.txt";
-       std::ofstream out(logger,std::ios::app);
+       std::ofstream out(abs(file),std::ios::app);
+       if (!out.is_open()) return "cant_open";
        out << data << std::endl;
-       if (!out) return "cant_open";
-       return "logged";
+       return data;
     }
     inline std::string read(std::string file)
     {
-    	std::ifstream dc(abs(file));
+    	std::ifstream dc(abs(file),std::ios::in);
 	if (!dc.is_open())
 	{
 	   throw std::runtime_error("cant open.file");
@@ -63,16 +61,6 @@ namespace facs
 	std::string out;
 	std::getline(dc, out);
 	return out;
-    }
-    inline std::string write(std::string file,std::string data)
-    {
-	std::ofstream lk(abs(file),std::ios::app);
-	if (!lk.is_open())
-	{
-	   throw std::runtime_error("cant open");
-	}
-	lk << data << std::endl;
-	return "done";
     }
     template<typename T>
     inline void prt(T data,bool line)
@@ -86,10 +74,18 @@ namespace facs
              std::cout<<data;
         }
     }
+//fixing,please dont use this
     template<typename T>
-    inline void ipt(T& name)
+    inline T ipt(T name)
     {
-        std::cin>>name;
+        std::getline(std::cin,name);
+        if (std::cin.fail())
+        {
+             std::cin.clear();
+             std::cin.ignore();
+        }
+        return name;
     }
+//in duty,do not use till we push a update abour this
 }
 #endif
