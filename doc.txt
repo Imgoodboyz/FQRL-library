@@ -43,4 +43,9 @@ the true or false is for have endl or not
 
 just easy like that
 and also you will have some macro is
+version to show current version 
+
+last_update to show the last day the library has been updated
+
+minimum to show the minimum version of c++ to use the library
 
