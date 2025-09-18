@@ -75,16 +75,16 @@ namespace facs
         }
     }
 //fixing,please dont use this
-    template<typename T>
-    inline T ipt(T name)
+    template<typename E>
+    inline void ipt(E& name)
     {
-        std::getline(std::cin,name);
+        std::cin>>name;
         if (std::cin.fail())
         {
              std::cin.clear();
              std::cin.ignore();
         }
-        return name;
+        return;
     }
 //in duty,do not use till we push a update abour this
 }

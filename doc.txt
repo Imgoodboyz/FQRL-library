@@ -1,4 +1,5 @@
 FCLC-Fast CaLCulating
+//planning to refactor in 0.0.15 future preview or 0.0.15 preview
 sum()
 how to write
 #sum ({list of number seperate with coma or space})
@@ -15,13 +16,13 @@ you can do thing like sum but it calc the average
 FACS-Fast ACcess System
 abs()
 how to write
-abs(file name)
+#abs(file name)
 it will find the absolute path of the file that you write on
 the bracket...that's all what it have...maybe
 
-log()
+write()
 how to write
-#log(file name,data want to write)
+#write(file name,data want to write)
 it will write on a .log file and that it what do you want on 
 that,i'll rename it as write because it look the same with 
 the write function
@@ -32,14 +33,14 @@ read(file name)
 #it will find the path of the file and read anything it have
 only read no encode file but in the actual release it will
 
-write() [remove in 0.0.14]
-how to write
-like log() actualy :)
+write()
+deleted in 0.0.14 future preview
 
 ipt()
 how to write
 #ipt(name of the object(e.x (int)a,b,c,d))
 use like std::cin but faster
+in fixing and refacrory,please wait
 
 prt()
 just fast printing
