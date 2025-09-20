@@ -1,0 +1,17 @@
+this is every stage of the FQRL library
+
+Full release
+only display on the major update like the v0.x.0 or adding new namespace
+
+release
+use for the update like 0.x.x,adding new function
+
+future view 
+it's show that version is nearly finish to be a release but still not enough
+
+preview
+a version that show only few function
+
+concept
+it's still available for everyone but are not compability for old compiler
+

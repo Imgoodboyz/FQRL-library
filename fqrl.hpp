@@ -1,8 +1,8 @@
 #ifndef header
 #define header
-#define version = "0.0.14-future-preview"
+#define version = "0.0.15-preview"
 #define minimum = "c++ 20"
-#define last_update = "14/9/2025"
+#define last_update = "18/9/2025"
 #define authorizer = "imgoodboy"
 #include <initializer_list>
 #include <filesystem>
@@ -39,17 +39,33 @@ namespace fclc
 }
 namespace facs
 {
+    inline bool exist(std::string name)
+    {
+        std::ifstream hd(name);
+        return hd.is_open() || hd.good();
+    }
+    inline bool readable(std::string name)
+    {
+	std::ifstream fc(name,std::ios::in);
+        return fc.good();
+    }
+    inline bool writeable(std::string name)
+    {
+	std::ofstream fo(name,std::ios::app);
+        fo << "";
+        return fo.good();
+    }
     inline std::string abs(const std::string name)
     {
-       return std::filesystem::absolute(name).string();
+        return std::filesystem::absolute(name).string();
     }
     template<typename T>
     inline T write(const std::string file,const T data)
     {
-       std::ofstream out(abs(file),std::ios::app);
-       if (!out.is_open()) return "cant_open";
-       out << data << std::endl;
-       return data;
+        std::ofstream out(abs(file),std::ios::app);
+        if (!out.is_open()) return "cant_open";
+        out << data << std::endl;
+        return data;
     }
     inline std::string read(std::string file)
     {
@@ -74,7 +90,6 @@ namespace facs
              std::cout<<data;
         }
     }
-//fixing,please dont use this
     template<typename E>
     inline void ipt(E& name)
     {
@@ -86,6 +101,5 @@ namespace facs
         }
         return;
     }
-//in duty,do not use till we push a update abour this
 }
 #endif

@@ -29,12 +29,12 @@ the write function
 
 read()
 how to write
-read(file name)
-#it will find the path of the file and read anything it have
+#read(file name)
+it will find the path of the file and read anything it have
 only read no encode file but in the actual release it will
 
 write()
-deleted in 0.0.14 future preview
+deletes
 
 ipt()
 how to write
@@ -46,6 +46,19 @@ prt()
 just fast printing
 #prt(data,true/false)
 the true or false is for have endl or not
+
+new function!
+writeable()
+#writeable(file name)
+it's use to check if a file is writeable
+
+readable()
+#readable(file name)
+use to check if a file can be read
+
+exist()
+#exist(file name or path)
+use to check if a file is exist like the name you know
 
 just easy like that
 and also you will have some macro is
