@@ -2,7 +2,7 @@
 #define header
 #define version = "0.0.15-preview"
 #define minimum = "c++ 20"
-#define last_update = "18/9/2025"
+#define last_update = "20/9/2025"
 #define authorizer = "imgoodboy"
 #include <initializer_list>
 #include <filesystem>
