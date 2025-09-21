@@ -1,5 +1,5 @@
 FCLC-Fast CaLCulating
-//planning to refactor in 0.0.15 future preview or 0.0.15 preview
+refactored!
 sum()
 how to write
 #sum ({list of number seperate with coma or space})
@@ -14,7 +14,7 @@ use avg to calculating average of many number in 1 line,also
 you can do thing like sum but it calc the average
 
 FACS-Fast ACcess System
-abs()
+abs()"deleted due to uncompability with cross platform"
 how to write
 #abs(file name)
 it will find the absolute path of the file that you write on

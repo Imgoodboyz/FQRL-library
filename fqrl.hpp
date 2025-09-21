@@ -1,11 +1,9 @@
 #ifndef header
 #define header
-#define version = "0.0.15-preview"
-#define minimum = "c++ 20"
-#define last_update = "20/9/2025"
+#define version = "0.0.15-future-view"
+#define minimum = "c++ 98"
+#define last_update = "21/9/2025"
 #define authorizer = "imgoodboy"
-#include <initializer_list>
-#include <filesystem>
 #include <string>
 #include <fstream>
 #include <stdexcept>
@@ -14,24 +12,24 @@
 #include <sstream>
 namespace fclc
 {
-    template<typename T>
-    inline T sum(std::initializer_list<T>num)
+    inline double sum(std::vector<double>num)
     {
+       int i = num.size();
        double total = 0;
-       for (T x : num)
+       for (int x=0;x<i;x++)
        {
-          total += x;
+          total += num[x];
        }
        return total;
     }
-    template<typename T>
-    inline T avg(std::initializer_list<T>num)
+    inline double avg(std::vector<double>num)
     {
+       int i = num.size();
        double total = 0;
        int length = 0;
-       for (T x : num)
+       for (int x = 0;x<i;x++)
        {
-          total += x;
+          total += num[x];
           length += 1;
        }
        return total/length;
@@ -55,21 +53,17 @@ namespace facs
         fo << "";
         return fo.good();
     }
-    inline std::string abs(const std::string name)
-    {
-        return std::filesystem::absolute(name).string();
-    }
     template<typename T>
     inline T write(const std::string file,const T data)
     {
-        std::ofstream out(abs(file),std::ios::app);
+        std::ofstream out(file,std::ios::app);
         if (!out.is_open()) return "cant_open";
         out << data << std::endl;
         return data;
     }
     inline std::string read(std::string file)
     {
-    	std::ifstream dc(abs(file),std::ios::in);
+    	std::ifstream dc(file,std::ios::in);
 	if (!dc.is_open())
 	{
 	   throw std::runtime_error("cant open.file");
