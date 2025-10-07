@@ -1,9 +1,9 @@
 #ifndef header
 #define header
-#define version = "0.0.15-future-view"
-#define minimum = "c++ 98"
-#define last_update = "21/9/2025"
-#define authorizer = "imgoodboy"
+#define version "0.0.15-future-view"
+#define minimum "c++ 98"
+#define last_update "21/9/2025"
+#define authorizer "imgoodboy"
 #include <string>
 #include <fstream>
 #include <stdexcept>
@@ -33,6 +33,11 @@ namespace fclc
           length += 1;
        }
        return total/length;
+    }
+    inline int log(int g)
+    {
+        if (g == 1) return g;
+        return g*log(g-1);
     }
 }
 namespace facs
@@ -73,7 +78,7 @@ namespace facs
 	return out;
     }
     template<typename T>
-    inline void prt(T data,bool line)
+    inline void prt(const T& data,bool line)
     {
         if (line == true)
         {
@@ -83,6 +88,7 @@ namespace facs
         {
              std::cout<<data;
         }
+        return;
     }
     template<typename E>
     inline void ipt(E& name)
@@ -94,6 +100,18 @@ namespace facs
              std::cin.ignore();
         }
         return;
+    }
+}
+namespace ultils
+{
+    inline std::vector<std::string> reverse_vector(std::vector<std::string> vec)
+    {
+	std::vector<std::string> new_vec;
+        for (int len=vec.size();len >= 0;--len)
+        {
+	     new_vec.push_back(vec[len]);
+        }
+        return new_vec;
     }
 }
 #endif
