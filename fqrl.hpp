@@ -1,6 +1,6 @@
 #ifndef header
 #define header
-#define version "0.0.15-future-view"
+#define version "0.0.16-preview"
 #define minimum "c++ 98"
 #define last_update "21/9/2025"
 #define authorizer "imgoodboy"
