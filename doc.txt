@@ -34,7 +34,7 @@ it will find the path of the file and read anything it have
 only read no encode file but in the actual release it will
 
 write()
-deletes
+deleted
 
 ipt()
 how to write
