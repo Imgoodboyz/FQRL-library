@@ -61,6 +61,8 @@ class Facs : public std::fstream
     }
     inline bool readable(std::string filename)
     {
+        char ch;
+        get(ch);
         return good();
     }
     inline bool writeable(std::string name)
@@ -73,40 +75,6 @@ class Facs : public std::fstream
         if (!is_open()) return "cant_open";
         *this << data << std::endl;
         return data;
-    }
-    inline std::string read()
-    {
-        if (!is_open())
-        {
-           throw std::runtime_error("cant open.file");
-        }
-        std::string out;
-        readline(out);
-        return out;
-    }
-    template<typename T>
-    inline void prt(const T& data,bool line)
-    {
-        if (line == true)
-        {
-             std::cout<<data<<std::endl;
-        }
-        if (line == false)
-        {
-             std::cout<<data;
-        }
-        return;
-    }
-    template<typename E>
-    inline void ipt(E& name)
-    {
-        std::cin>>name;
-        if (std::cin.fail())
-        {
-             std::cin.clear();
-             std::cin.ignore();
-        }
-        return;
     }
     ~Facs() {};
 };
