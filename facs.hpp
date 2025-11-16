@@ -53,7 +53,6 @@ class Facs : public std::fstream
              pos = tellg();
              vec.push_back(std::fpos<mbstate_t>(pos));
         }
-        return vec;
     }
     inline bool exist()
     {
