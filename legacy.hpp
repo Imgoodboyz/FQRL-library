@@ -1,8 +1,8 @@
 #ifndef header
 #define header
-#define version "0.0.16-preview"
+#define version "0.0.19-beta"
 #define minimum "c++ 98"
-#define last_update "21/9/2025"
+#define last_update "16/11/2025"
 #define authorizer "imgoodboy"
 #include <string>
 #include <fstream>
@@ -42,6 +42,28 @@ namespace fclc
 }
 namespace facs
 {
+    inline void takeline(std::string filename,std::vector<std::fpos<mbstate_t> >& vec)
+    {
+         std::ifstream f(filename);
+         std::string str;
+         char ch;
+         std::fpos<mbstate_t> pos = 0;
+         while (true)
+         {
+               f.seekg(pos);
+               std::getline(f,str);
+               f.get(ch);
+               if (!f.get(ch)) break;
+               pos = f.tellg();
+               vec.push_back(fpos<mbstate_t> pos);
+         }
+    }
+    inline void rol(std::string filename,std::fpos<mbstate_t> pos,std::string& str)
+    {
+    std::ifstream f(filename);
+    f.seekg(pos);
+    std::getline(f,str)
+    }
     inline bool exist(std::string name)
     {
         std::ifstream hd(name);
